@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace Team_software_project
 {
     class Elukat
     {
-        public string species;
-        public string status;
-        public string name;
-        public int weight;
+        public string species { get; private set; }
+        public string status { get; private set; }
+        public string name { get; private set; }
+        public int weight { get; private set; }
+        public string sound { get; private set; }
 
         public void Givename()
         {
@@ -27,26 +24,40 @@ namespace Team_software_project
             if (species is "Wolf")
             {
                 this.species = species;
+                this.status = "wild";
+                this.sound = "owooo";              
+
             }
             else if(species is "Tiger")
             {
                 this.species = species;
+                this.status = "wild";
+                this.sound = "roar"; 
             }
             else if (species is "Bear")
             {
                 this.species = species;
+                this.status = "wild";
+                this.sound = "roar"; 
             }
             else if (species is "Cat")
             {
                 this.species = species;
+                this.status = "tame";
+                this.sound = "meow";
             }
             else if (species is "Dog")
             {
                 this.species = species;
+                this.sound = "woof";
+                this.status = "tame";
             }
             else if (species is "Bird")
             {
                 this.species = species;
+                this.status = "wild";
+                this.sound = "tweet-tweet"; 
+          
             }
             else
             {
@@ -56,27 +67,19 @@ namespace Team_software_project
         }
 
         public void Feed()
-        {
-            this.weight = 1;
+        {   if (status == "tame")
+            {
+                this.weight = 1;
+            }
+            else 
+                Hunt(); 
 
         }
 
-        public string Name
+        public void Hunt()
         {
-            get { return this.name; }
-
+            Random rnd = new Random();
+            int result = rnd.Next(1, 10);
+            this.weight = result <= 6 ? 1 : 0;
         }
-
-        public string Species
-        {
-            get { return this.species; }
-        }
-
-        public int Weight
-        {
-            get { return this.weight; }
-
-        }
-
-    }
-}
+        

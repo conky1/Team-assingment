@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace Team_software_project
 {
@@ -98,6 +94,27 @@ namespace Team_software_project
 
                     }
                     
+                }
+                
+                else if (activity is "MakeSound")
+                {  
+                    
+                    Console.WriteLine("\n" + elukka.sound); 
+
+                }
+
+                else if (activity is "TalkToOwner")
+                {
+                   if (elukka.status == "tame")
+                    {
+                        Console.WriteLine("\n" + elukka.sound);
+                    }
+
+                   else if (elukka.status == "wild")
+                    {
+                        Console.WriteLine("\n" + "Wild animals have no owners!");
+                    }
+
                 }
 
                 else if(activity is "back")
