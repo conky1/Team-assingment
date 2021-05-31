@@ -57,7 +57,7 @@ namespace Team_software_project
                 {
                     if (animals.status is "wild")
                     {
-                        Console.WriteLine("\nWild animals won't come close to humans!");
+                        Console.WriteLine("\nWild animals don't come close to humans!");
                     }
 
                     else if (ComeHere > 0)
