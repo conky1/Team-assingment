@@ -75,7 +75,7 @@ namespace Team_software_project
                 else if (activity is "GiveName")
                 {
 
-                    animals.Givename();
+                    animals.GiveName();
                     nameCount++;
                 }
 

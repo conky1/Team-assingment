@@ -10,7 +10,7 @@ namespace Team_software_project
         public int weight { get; private set; }
         public string sound { get; private set; }
 
-        public void Givename()
+        public void GiveName()
         {
             Console.Write("\nGive name: \n> ");
             string name = Console.ReadLine();
