@@ -5,3 +5,10 @@ C:\Users\pentt\source\repos\Team software project\Team software project\obj\Debu
 C:\Users\pentt\source\repos\Team software project\Team software project\obj\Debug\Team software project.csproj.CoreCompileInputs.cache
 C:\Users\pentt\source\repos\Team software project\Team software project\obj\Debug\Team software project.exe
 C:\Users\pentt\source\repos\Team software project\Team software project\obj\Debug\Team software project.pdb
+C:\Users\pentt\Source\Repos\Team-assingment(TG)\Team software project\bin\Debug\Team software project.exe.config
+C:\Users\pentt\Source\Repos\Team-assingment(TG)\Team software project\bin\Debug\Team software project.exe
+C:\Users\pentt\Source\Repos\Team-assingment(TG)\Team software project\bin\Debug\Team software project.pdb
+C:\Users\pentt\Source\Repos\Team-assingment(TG)\Team software project\obj\Debug\Team software project.csprojAssemblyReference.cache
+C:\Users\pentt\Source\Repos\Team-assingment(TG)\Team software project\obj\Debug\Team software project.csproj.CoreCompileInputs.cache
+C:\Users\pentt\Source\Repos\Team-assingment(TG)\Team software project\obj\Debug\Team software project.exe
+C:\Users\pentt\Source\Repos\Team-assingment(TG)\Team software project\obj\Debug\Team software project.pdb

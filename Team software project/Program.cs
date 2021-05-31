@@ -5,8 +5,8 @@ namespace Team_software_project
     class Program
     {
         static void Main(string[] args)
-        {   
-            
+        {
+
             while (true)
             {
                 Console.Write("What do you want to do?: list / quit \n> ");
@@ -17,7 +17,7 @@ namespace Team_software_project
                     Animals();
                     CallAnimal();
                     break;
-                   
+
 
                 }
                 else if (toDo is "quit")
@@ -31,7 +31,7 @@ namespace Team_software_project
                     Console.WriteLine("Invalid command!\n");
                 }
             }
-           
+
 
             Console.ReadLine();
         }
@@ -42,16 +42,12 @@ namespace Team_software_project
 
         static void CallAnimal()
         {
-           
-            
-           /* Console.Write("Which animal do you want to see? \n> ");
-            string animal = Console.ReadLine();*/
 
-            Elukat elukka = new Elukat();
-            elukka.AnimalSpecies();
+            Animal animals = new Animal();
+            animals.AnimalSpecies();
             int nameCount = 0;
             int ComeHere = 0;
-            
+
             while (true)
             {
 
@@ -59,70 +55,93 @@ namespace Team_software_project
                 string activity = Console.ReadLine();
                 if (activity is "ComeHere")
                 {
-                   
-                    if (ComeHere > 0)
+                    if (animals.status is "wild")
                     {
-                        Console.WriteLine("The animal is already with you!");
+                        Console.WriteLine("\nWild animals won't come close to humans!");
+                    }
+
+                    else if (ComeHere > 0)
+                    {
+                        Console.WriteLine("\nThe animal is already with you!");
                     }
                     else
                     {
-                        Console.WriteLine("\n" + elukka.species + " came to the owner");
+                        Console.WriteLine("\n" + animals.species + " came to the owner");
                     }
                     ComeHere++;
 
                 }
 
-                else if(activity is "GiveName")
+                else if (activity is "GiveName")
                 {
-                    /*Console.Write("Give a name ");
-                    string petName = Console.ReadLine();
-                    Elukat name = new Elukat() { name = petName };*/
-                    elukka.Givename();
+
+                    animals.Givename();
                     nameCount++;
                 }
 
-                else if(activity is "Eat")
+                else if (activity is "Eat")
                 {
-                    elukka.Feed();
-                    if (nameCount >= 1)
+                    animals.Feed();
+                    if (nameCount >= 1 && animals.status is "tame")
                     {
-                        Console.WriteLine("\n" + elukka.name + " gained weight " + elukka.weight + " kg");
+                        Console.WriteLine("\n" + animals.name + " gained weight 1 kg and weights " + animals.weight + " kg");
                     }
-                    else
+                    else if (nameCount == 0 && animals.status is "tame")
                     {
-                        Console.WriteLine("\n" + elukka.species + " gained weight " + elukka.weight + " kg");
+                        Console.WriteLine("\n" + animals.species + " gained weight 1kg and weights " + animals.weight + " kg");
 
                     }
-                    
+
                 }
-                
+
                 else if (activity is "MakeSound")
-                {  
-                    
-                    Console.WriteLine("\n" + elukka.sound); 
+                {
+
+                    Console.WriteLine("\n" + animals.sound);
 
                 }
 
                 else if (activity is "TalkToOwner")
                 {
-                   if (elukka.status == "tame")
+                    if (animals.status == "tame")
                     {
-                        Console.WriteLine("\n" + elukka.sound);
+                        Console.WriteLine("\n" + animals.sound);
                     }
 
-                   else if (elukka.status == "wild")
+                    else if (animals.status == "wild")
                     {
                         Console.WriteLine("\n" + "Wild animals have no owners!");
                     }
 
                 }
 
-                else if(activity is "back")
+                else if (activity is "MakeSound")
+                {
+
+                    Console.WriteLine("\n" + animals.sound);
+
+                }
+
+                else if (activity is "TalkToOwner")
+                {
+                    if (animals.status == "tame")
+                    {
+                        Console.WriteLine("\n" + animals.sound);
+                    }
+
+                    else if (animals.status == "wild")
+                    {
+                        Console.WriteLine("\n" + "Wild animals have no owners!");
+                    }
+
+                }
+
+                else if (activity is "back")
                 {
                     Animals();
                     CallAnimal();
                 }
-                else if(activity is "quit")
+                else if (activity is "quit")
                 {
                     Console.WriteLine("Have a nice day!");
                     break;
@@ -135,7 +154,7 @@ namespace Team_software_project
 
 
         }
-       
-        
+
+
     }
 }
